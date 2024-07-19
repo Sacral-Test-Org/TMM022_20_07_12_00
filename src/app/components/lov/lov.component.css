@@ -1,0 +1,66 @@
+/* Styles for the List of Values (LOV) component */
+
+.lov-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lov-header {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.lov-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.lov-list-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.lov-list-item:hover {
+  background-color: #f1f1f1;
+}
+
+.lov-list-item.selected {
+  background-color: #e0e0e0;
+  font-weight: bold;
+}
+
+.lov-footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.lov-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.lov-button:hover {
+  background-color: #0056b3;
+}
+
+.lov-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}

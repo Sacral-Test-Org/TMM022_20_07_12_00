@@ -1,0 +1,55 @@
+/* Styling for the EDIT_GROUP_LOV component */
+
+/* Container for the LOV */
+.lov-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* Header styling */
+.lov-header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* List item styling */
+.lov-item {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.lov-item:hover {
+  background-color: #e0e0e0;
+}
+
+/* Selected item styling */
+.lov-item.selected {
+  background-color: #c0c0c0;
+}
+
+/* Button styling */
+.lov-button {
+  padding: 10px 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 3px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.lov-button:hover {
+  background-color: #0056b3;
+}
+
+/* Disabled button styling */
+.lov-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}

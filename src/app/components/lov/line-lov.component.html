@@ -1,0 +1,16 @@
+<div *ngIf="globalParameter === 0">
+  <h2>LINE_LOV List of Values</h2>
+  <ul>
+    <li *ngFor="let item of lineLovList" (click)="selectLineId(item)">
+      {{ item.LINE_ID }} - {{ item.LINE_DESC }}
+    </li>
+  </ul>
+</div>
+<div *ngIf="globalParameter === 1">
+  <h2>EDIT_LINE_LOV List of Values</h2>
+  <ul>
+    <li *ngFor="let item of editLineLovList" (click)="selectLineId(item)">
+      {{ item.LINE_ID }} - {{ item.LINE_DESC }}
+    </li>
+  </ul>
+</div>

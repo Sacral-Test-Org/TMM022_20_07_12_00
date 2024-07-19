@@ -1,0 +1,24 @@
+<div *ngIf="lovList && lovList.length > 0">
+  <h3>Select a Value</h3>
+  <ul>
+    <li *ngFor="let item of lovList" (dblclick)="selectValue(item)">{{item}}</li>
+  </ul>
+</div>
+
+<script>
+  import { Component, Input, Output, EventEmitter } from '@angular/core';
+
+  @Component({
+    selector: 'app-lov',
+    templateUrl: './lov.component.html',
+    styleUrls: ['./lov.component.css']
+  })
+  export class LovComponent {
+    @Input() lovList: string[];
+    @Output() selectedValue = new EventEmitter<string>();
+
+    selectValue(value: string) {
+      this.selectedValue.emit(value);
+    }
+  }
+</script>

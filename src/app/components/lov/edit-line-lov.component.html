@@ -1,0 +1,17 @@
+<div class="edit-line-lov-container">
+  <h2>Edit Line List of Values</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Line ID</th>
+        <th>Line Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let line of editLineLov">
+        <td>{{ line.LINE_ID }}</td>
+        <td>{{ line.LINE_DESC }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

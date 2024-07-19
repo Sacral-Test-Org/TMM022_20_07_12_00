@@ -1,0 +1,51 @@
+<div class="part-details-container">
+  <div class="header">
+    <div class="system-date">{{ currentDate | date:'MM/dd/yyyy' }}</div>
+    <div class="screen-name">
+      Part Details
+      <span class="hint">(Press F1 to run a new form, F2 to return back)</span>
+    </div>
+    <div class="mode-of-operation">Mode: {{ modeOfOperation }}</div>
+  </div>
+  <div class="form-group">
+    <label for="unitId">Unit ID:</label>
+    <input type="text" id="unitId" [(ngModel)]="unitId">
+  </div>
+  <div class="form-group">
+    <label for="unitName">Unit Name:</label>
+    <input type="text" id="unitName" [(ngModel)]="unitName">
+  </div>
+  <div class="form-group">
+    <label for="groupId">Group ID:</label>
+    <input type="text" id="groupId" [(ngModel)]="groupId">
+  </div>
+  <div class="form-group">
+    <label for="groupName">Group Name:</label>
+    <input type="text" id="groupName" [(ngModel)]="groupName">
+  </div>
+  <div class="form-group">
+    <label for="lineId">Line ID:</label>
+    <input type="text" id="lineId" [(ngModel)]="lineId">
+  </div>
+  <div class="form-group">
+    <label for="lineDescription">Line Description:</label>
+    <input type="text" id="lineDescription" [(ngModel)]="lineDescription">
+  </div>
+  <div class="form-group">
+    <label for="partId">Part ID:</label>
+    <input type="text" id="partId" [(ngModel)]="partId">
+  </div>
+  <div class="form-group">
+    <label for="partNumber">Part Number:</label>
+    <input type="text" id="partNumber" [(ngModel)]="partNumber">
+  </div>
+  <div class="form-group">
+    <label for="partDescription">Part Description:</label>
+    <input type="text" id="partDescription" [(ngModel)]="partDescription" (click)="onPartDescriptionClick()" (dblclick)="onPartDescriptionClick()">
+  </div>
+  <div class="form-group">
+    <label for="partStatus">Part Status:</label>
+    <input type="text" id="partStatus" [(ngModel)]="partStatus" readonly>
+  </div>
+  <div class="validation-message" *ngIf="validationMessage">{{ validationMessage }}</div>
+</div>

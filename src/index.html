@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T K A P - [IS]</title>
+  <style>
+    body {
+      cursor: default;
+    }
+  </style>
+</head>
+<body>
+  <app-root></app-root>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize global parameter
+      let globalParameter = 0;
+
+      // Set form mode based on global parameter
+      let formMode = globalParameter === 0 ? 'Create Mode' : 'Edit Mode';
+
+      // Set current date in specific field, truncated to remove the time portion
+      let currentDate = new Date().toISOString().split('T')[0];
+      document.getElementById('dateField').value = currentDate;
+
+      // Disable SAVE button
+      document.getElementById('saveButton').disabled = true;
+
+      // Enable specific fields
+      ['groupId', 'partNumber', 'partStatus', 'partDescription', 'lineId'].forEach(fieldId => {
+        document.getElementById(fieldId).disabled = false;
+      });
+
+      // Enable Unit ID field if not enabled
+      let unitIdField = document.getElementById('unitId');
+      if (unitIdField.disabled) {
+        unitIdField.disabled = false;
+      }
+
+      // Move cursor to Unit ID field
+      unitIdField.focus();
+    });
+  </script>
+</body>
+</html>

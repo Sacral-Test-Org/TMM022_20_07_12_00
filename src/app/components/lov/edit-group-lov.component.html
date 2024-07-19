@@ -1,0 +1,16 @@
+<div class="edit-group-lov">
+  <table>
+    <thead>
+      <tr>
+        <th>Group ID</th>
+        <th>Group Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let group of editGroupLov">
+        <td>{{ group.GROUP_ID }}</td>
+        <td>{{ group.GROUP_NAME }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
